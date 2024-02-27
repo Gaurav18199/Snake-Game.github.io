@@ -29,6 +29,12 @@
     font-family: "Sacramento", cursive;
 }
 
+@media screen and (max-width: 600px) {
+    #scoreBox {
+     top: 50px;
+    }
+  }
+
 #hiscoreBox{
     position: absolute;
     top: 60px;
@@ -37,6 +43,12 @@
     font-weight: bold;
     font-family: "Sacramento", cursive;
 }
+
+@media screen and (max-width: 600px) {
+    #hiscoreBox {
+     top: 110px;
+    }
+  }
 
 #board {
     background: linear-gradient(rgb(131, 218, 131), rgb(212, 212, 113));
