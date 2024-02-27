@@ -16,6 +16,7 @@
 @media screen and (max-width: 600px) {
     .body {
       background-image: url('image/image2.jpg');
+      min-height: 100vh;
       background-size: 100vw 100vh;
     }
   }
