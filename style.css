@@ -13,6 +13,12 @@
     align-items: center;
     display: flex;
 }
+@media screen and (max-width: 600px) {
+    .body {
+      background-image: url('image/image2.jpg');
+      
+    }
+  }
 
 #scoreBox{
     position: absolute;
