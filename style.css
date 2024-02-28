@@ -62,21 +62,32 @@
 }
 
 .head{
-    background: linear-gradient(red, yellow);
+    background-image: url('image/head.png');
+    background-size: cover;
+    transform: scale(1.02);
+
+    /* background: linear-gradient(red, yellow);
     border:  2px solid rgb(89, 48, 89);
     transform: scale(1.02);
-    border-radius: 9px;
+    border-radius: 9px; */
 }
 
 .snake{
-    background-color: purple;
+    background-image: url('image/body.jpg');
+    background-size: cover;
+    border-radius: 25px;
+
+    /* background-color: purple;
     border:  .25vmin solid white;
-    border-radius: 12px;
+    border-radius: 12px; */
 }
 
 .food{
-    background-color: yellow;
+    background-image: url('image/food.png');
+    background-size: cover;
+
+    /* background-color: yellow;
     background: linear-gradient(red, purple);
     border:  .25vmin solid black;
-    border-radius: 8px;
+    border-radius: 8px; */
 }
