@@ -52,7 +52,9 @@
   }
 
 #board {
-    background: linear-gradient(rgb(131, 218, 131), rgb(212, 212, 113));
+    background-image: url(image/board.png);
+    background-size: cover;
+    /* background: linear-gradient(rgb(131, 218, 131), rgb(212, 212, 113)); */
     width: 92vmin;
     height: 92vmin;
     border: 2px solid black;
