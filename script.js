@@ -97,10 +97,10 @@ function gameEngine(){
         foodElement.classList.add('food')
         board.appendChild(foodElement);
 }
-
+// Set loop property to true for repeating playback
+musicSound.loop = true; 
 
 // Main logic starts here
-musicSound.play();
 let hiscore = localStorage.getItem("hiscore");
 if(hiscore === null){
     hiscoreval = 0;
@@ -133,12 +133,12 @@ window.addEventListener('touchmove', (e)=>{
 
     if (Math.abs(diffX)> Math.abs(diffY)){
         //Horizontal swipe
-        if (diffX > 0){
+        if (diffX > 0 && inputDir.x !== 1){
             //Swipe left
             inputDir.x = -1;
             inputDir.y = 0;
         }
-        else {
+        else if (diffX < 0 && inputDir.x !== -1) {
             // Swipe right
             inputDir.x = 1;
             inputDir.y = 0;
@@ -146,12 +146,12 @@ window.addEventListener('touchmove', (e)=>{
     } 
     else {
         // Vertical swipe
-        if (diffY > 0) {
+        if (diffY > 0 && inputDir.y !== 1) {
             // Swipe up
             inputDir.x = 0;
             inputDir.y = -1;
         } 
-        else {
+        else if (diffY < 0 && inputDir.y !== -1) {
             // Swipe down
             inputDir.x = 0;
             inputDir.y = 1;
@@ -164,8 +164,11 @@ window.addEventListener('touchmove', (e)=>{
 
 // Keydown event listener
 window.addEventListener('keydown', e =>{
-     // Start the game
-     moveSound.play();
+    // Start the game
+    if(inputDir.x === 0 && inputDir.y === 0) {
+        musicSound.play(); // Play music when the snake starts moving
+    }
+    moveSound.play();
     switch (e.key){
         case "ArrowUp":
             if(inputDir.y !== 1){ // Prevent moving directly down if currently moving up
